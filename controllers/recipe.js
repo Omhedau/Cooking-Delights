@@ -10,7 +10,7 @@ const likeRecipe = async (req, res) => {
     try {
         const { recipeId } = req.params;
         const { id: userId } = req.user;
-
+        console.log("om ........");
         const user = await User.findById(userId);
         const recipe = await Recipe.findById(recipeId);
         if (!user || !recipe) {
